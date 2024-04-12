@@ -1,11 +1,11 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Joke do
-
-	it "creates a valid record" do
-		count = Joke.all.count
-		Joke.create()
-		expect(Joke.all.count).to eq (count+1)
-	end
-	
+  it 'creates a valid record' do
+    count = Joke.all.count
+    Joke.create
+    expect(Joke.all.count).to eq(count + 1)
+  end
 end

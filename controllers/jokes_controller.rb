@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # index
 get '/jokes' do
-	@jokes = Joke.all
-	erb :'jokes/index'
+  @jokes = Joke.all
+  erb :'jokes/index'
 end
 
 # new
@@ -12,8 +14,6 @@ end
 # create
 post '/jokes' do
   joke = Joke.new(params[:joke])
-  
-  if joke.save
-    redirect '/jokes'
-  end
+
+  redirect '/jokes' if joke.save
 end

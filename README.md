@@ -6,6 +6,7 @@ A simple Sinatra app illustrating the concepts behind TDD.
 ### Getting Started
 
 - Install Ruby Dependencies
+`gem install rubocop`
 `bundle`
 
 - Fire up the Rack server

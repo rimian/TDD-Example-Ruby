@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../app'
 require 'rack/test'
 require 'capybara/rspec'
@@ -14,10 +16,10 @@ end
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-  
+
   # delete all jokes before running each spec
   config.before(:each) do
-  	Joke.all.destroy
+    Joke.all.destroy
   end
 end
 
