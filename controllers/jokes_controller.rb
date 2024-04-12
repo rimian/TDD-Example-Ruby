@@ -2,7 +2,7 @@
 
 # index
 get '/jokes' do
-  @jokes = Joke.all
+  @jokes = []
   erb :'jokes/index'
 end
 
@@ -13,7 +13,5 @@ end
 
 # create
 post '/jokes' do
-  joke = Joke.new(params[:joke])
-
-  redirect '/jokes' if joke.save
+  redirect '/jokes'
 end

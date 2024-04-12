@@ -16,11 +16,6 @@ end
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-
-  # delete all jokes before running each spec
-  config.before(:each) do
-    Joke.all.destroy
-  end
 end
 
 Capybara.configure do |config|
